@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OmniPulse AI - Executive Business Intelligence Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 30px;
+        }
+        .report-container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .header {
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header h1 {
+            margin: 0 0 6px 0;
+            color: #0f172a;
+            font-size: 26px;
+        }
+        .header p {
+            margin: 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        .kpi-card {
+            background: #f1f5f9;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #4f46e5;
+        }
+        .kpi-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 600;
+        }
+        .kpi-val {
+            font-size: 22px;
+            font-weight: 700;
+            color: #0f172a;
+            margin-top: 4px;
+        }
+        h2 {
+            color: #1e293b;
+            font-size: 18px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #f8fafc;
+            color: #475569;
+            font-weight: 600;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 11px;
+            color: #94a3b8;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <div class="header">
+            <div>
+                <h1>⚡ FreshPulse Supermarket & Groceries</h1>
+                <p><b>Executive Business Intelligence & Machine Learning Report</b></p>
+            </div>
+            <div style="text-align: right;">
+                <p><b>Report Date:</b> September 18, 2026</p>
+                <p><b>Domain:</b> SUPERMARKET</p>
+            </div>
+        </div>
+
+        <div class="kpi-grid">
+            <div class="kpi-card">
+                <div class="kpi-title">Gross Revenue</div>
+                <div class="kpi-val">$98,846.06</div>
+            </div>
+            <div class="kpi-card" style="border-left-color: #10b981;">
+                <div class="kpi-title">Net Profit Margin</div>
+                <div class="kpi-val">$15,011.74 (15.2%)</div>
+            </div>
+            <div class="kpi-card" style="border-left-color: #f59e0b;">
+                <div class="kpi-title">Average Order Value</div>
+                <div class="kpi-val">$20.80</div>
+            </div>
+            <div class="kpi-card" style="border-left-color: #8b5cf6;">
+                <div class="kpi-title">Active Customers</div>
+                <div class="kpi-val">199</div>
+            </div>
+        </div>
+
+        <h2>📈 Historical Financial Trajectory & MoM Pacing</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Gross Revenue</th>
+                    <th>Net Profit</th>
+                    <th>Orders</th>
+                    <th>MoM Growth</th>
+                    <th>Profit Margin</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>2026-01</td>
+                    <td>$3,787.39</td>
+                    <td>$553.90</td>
+                    <td>58</td>
+                    <td>+0.0%</td>
+                    <td>14.6%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-02</td>
+                    <td>$11,441.48</td>
+                    <td>$1,799.08</td>
+                    <td>222</td>
+                    <td>+202.1%</td>
+                    <td>15.7%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-03</td>
+                    <td>$14,478.69</td>
+                    <td>$2,141.13</td>
+                    <td>236</td>
+                    <td>+26.5%</td>
+                    <td>14.8%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-04</td>
+                    <td>$11,827.26</td>
+                    <td>$1,788.97</td>
+                    <td>211</td>
+                    <td>-18.3%</td>
+                    <td>15.1%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-05</td>
+                    <td>$12,374.19</td>
+                    <td>$1,873.77</td>
+                    <td>215</td>
+                    <td>+4.6%</td>
+                    <td>15.1%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-06</td>
+                    <td>$12,615.30</td>
+                    <td>$1,859.92</td>
+                    <td>234</td>
+                    <td>+1.9%</td>
+                    <td>14.7%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-07</td>
+                    <td>$11,579.48</td>
+                    <td>$1,783.81</td>
+                    <td>211</td>
+                    <td>-8.2%</td>
+                    <td>15.4%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-08</td>
+                    <td>$13,680.43</td>
+                    <td>$2,103.57</td>
+                    <td>242</td>
+                    <td>+18.1%</td>
+                    <td>15.4%</td>
+                </tr>
+                
+                <tr>
+                    <td>2026-09</td>
+                    <td>$7,061.84</td>
+                    <td>$1,107.59</td>
+                    <td>131</td>
+                    <td>-48.4%</td>
+                    <td>15.7%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h2>🏆 Vital Revenue Drivers (Pareto 80/20 Analysis)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product & SKU</th>
+                    <th>Category</th>
+                    <th>Units Sold</th>
+                    <th>Revenue</th>
+                    <th>Cumulative %</th>
+                    <th>Classification</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><b>Arabica Roast Coffee Beans (500g)</b> (GROC-BEV-001)</td>
+                    <td>Beverages</td>
+                    <td>390</td>
+                    <td>$5,066.10</td>
+                    <td>15.9%</td>
+                    <td><span style="color: #4f46e5; font-weight: 600;">Vital Few (Top 80%)</span></td>
+                </tr>
+                
+                <tr>
+                    <td><b>Sparkling Mineral Water (6x500ml)</b> (GROC-BEV-003)</td>
+                    <td>Beverages</td>
+                    <td>384</td>
+                    <td>$2,300.16</td>
+                    <td>23.2%</td>
+                    <td><span style="color: #4f46e5; font-weight: 600;">Vital Few (Top 80%)</span></td>
+                </tr>
+                
+                <tr>
+                    <td><b>Whole Milk (1 Gallon)</b> (GROC-DAIR-001)</td>
+                    <td>Dairy & Bakery</td>
+                    <td>579</td>
+                    <td>$2,252.31</td>
+                    <td>30.3%</td>
+                    <td><span style="color: #4f46e5; font-weight: 600;">Vital Few (Top 80%)</span></td>
+                </tr>
+                
+                <tr>
+                    <td><b>Eco Laundry Detergent (2L)</b> (GROC-HOUS-001)</td>
+                    <td>Household & Cleaning</td>
+                    <td>178</td>
+                    <td>$2,134.22</td>
+                    <td>37.0%</td>
+                    <td><span style="color: #4f46e5; font-weight: 600;">Vital Few (Top 80%)</span></td>
+                </tr>
+                
+                <tr>
+                    <td><b>Organic Red Apples (1kg)</b> (GROC-PROD-001)</td>
+                    <td>Fresh Produce</td>
+                    <td>380</td>
+                    <td>$1,516.20</td>
+                    <td>41.8%</td>
+                    <td><span style="color: #4f46e5; font-weight: 600;">Vital Few (Top 80%)</span></td>
+                </tr>
+                
+                <tr>
+                    <td><b>Salted Butter (250g)</b> (GROC-DAIR-003)</td>
+                    <td>Dairy & Bakery</td>
+                    <td>357</td>
+                    <td>$1,424.43</td>
+                    <td>46.2%</td>
+                    <td><span style="color: #4f46e5; font-weight: 600;">Vital Few (Top 80%)</span></td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h2>👥 Machine Learning Customer Segmentation (K-Means)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer Segment</th>
+                    <th>Customer Count</th>
+                    <th>Avg Recency</th>
+                    <th>Avg Frequency</th>
+                    <th>Avg Spend</th>
+                    <th>Revenue Share</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><b>Platinum VIPs</b></td>
+                    <td>40</td>
+                    <td>6.4 days</td>
+                    <td>25.9 orders</td>
+                    <td>$458.66</td>
+                    <td>58.2%</td>
+                </tr>
+                
+                <tr>
+                    <td><b>At-Risk / Lapsed</b></td>
+                    <td>59</td>
+                    <td>52.7 days</td>
+                    <td>3.1 orders</td>
+                    <td>$58.34</td>
+                    <td>10.9%</td>
+                </tr>
+                
+                <tr>
+                    <td><b>At-Risk / Lapsed</b></td>
+                    <td>44</td>
+                    <td>137.4 days</td>
+                    <td>1.3 orders</td>
+                    <td>$18.53</td>
+                    <td>2.6%</td>
+                </tr>
+                
+                <tr>
+                    <td><b>Regular Active Spenders</b></td>
+                    <td>56</td>
+                    <td>24.2 days</td>
+                    <td>8.6 orders</td>
+                    <td>$158.80</td>
+                    <td>28.2%</td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h2>🔮 Predictive Sales Demand Horizon (Holt-Winters Multiplicative)</h2>
+        <p style="font-size: 13px; color: #475569;">
+            <b>30-Day Forecast Horizon:</b> Model MAE: <b>$193.37</b> | MAPE: <b>70.14%</b> | Residual Std Dev: <b>$254.45</b>
+        </p>
+
+        <h2>📦 Supply Chain & Inventory Replenishment Priority</h2>
+        <p style="font-size: 13px; color: #475569;">
+            Total Monitored SKUs: <b>24</b> | Target Service Level: <b>95%</b> | SKUs Needing Reorder: <b>0</b>
+        </p>
+
+        <div class="footer">
+            Generated automatically by <b>OmniPulse AI Platform</b> • Universal Business Intelligence & Predictive Analytics Engine
+        </div>
+    </div>
+</body>
+</html>
