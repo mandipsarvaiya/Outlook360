@@ -43,22 +43,25 @@ def apply_theme(is_landing_page: bool = False):
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 24px;
+            padding: 14px 28px;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(226, 232, 240, 0.95);
             border-radius: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             box-shadow: 0 4px 20px -2px rgba(30, 58, 138, 0.05);
+            width: 100%;
+            box-sizing: border-box;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 16px;
         }}
 
         .landing-brand {{
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            flex-shrink: 0;
         }}
 
         .landing-brand-logo {{
@@ -94,19 +97,21 @@ def apply_theme(is_landing_page: bool = False):
         .landing-nav-links {{
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 8px;
             flex-wrap: wrap;
+            justify-content: flex-end;
         }}
 
         .landing-nav-link {{
             color: #334155 !important;
-            font-size: 0.86rem;
+            font-size: 0.88rem;
             font-weight: 600;
             text-decoration: none !important;
             padding: 7px 14px;
             border-radius: 8px;
             transition: all 0.2s ease;
             display: inline-block;
+            white-space: nowrap;
         }}
 
         .landing-nav-link:hover {{
@@ -171,27 +176,59 @@ def apply_theme(is_landing_page: bool = False):
             margin: 0 auto 18px auto;
         }}
 
-        .hero-btn-secondary {{
+        .hero-buttons-wrap {{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            margin: 20px auto 10px auto;
+            flex-wrap: wrap;
+        }}
+
+        .hero-btn-primary, .hero-btn-secondary {{
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 6px;
-            padding: 10px 20px;
+            gap: 8px;
+            width: 210px;
+            height: 44px;
+            padding: 0 16px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            font-weight: 650;
+            line-height: 1;
+            text-decoration: none !important;
+            box-sizing: border-box;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }}
+
+        .hero-btn-primary {{
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+            color: #ffffff !important;
+            border: 1px solid #1d4ed8;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }}
+
+        .hero-btn-primary:hover {{
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+            color: #ffffff !important;
+        }}
+
+        .hero-btn-secondary {{
             background: #ffffff;
             color: #1e293b !important;
-            font-weight: 600;
-            font-size: 0.88rem;
-            text-decoration: none !important;
             border: 1px solid #cbd5e1;
-            border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-            transition: all 0.2s ease;
         }}
 
         .hero-btn-secondary:hover {{
             border-color: #2563eb;
             color: #1d4ed8 !important;
             background: #eff6ff;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.15);
         }}
 
         /* ---------------------------------------------------------
@@ -674,20 +711,98 @@ def apply_theme(is_landing_page: bool = False):
             box-shadow: 0 6px 18px rgba(37, 99, 235, 0.3) !important;
         }}
 
+        [data-testid="stPageLink"] {{
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+        }}
+
         [data-testid="stPageLink-NavLink"] {{
-            border: 1px solid #e2e8f0 !important;
+            border: 1px solid #cbd5e1 !important;
             border-radius: 10px !important;
             background: #ffffff !important;
             transition: all 0.2s ease !important;
             font-weight: 600 !important;
             color: #1e293b !important;
+            height: 44px !important;
+            min-height: 44px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 24px !important;
+            box-sizing: border-box !important;
+            text-decoration: none !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+            gap: 8px !important;
+            margin: 0 auto !important;
+            width: auto !important;
         }}
 
         [data-testid="stPageLink-NavLink"]:hover {{
             border-color: #2563eb !important;
             background: #eff6ff !important;
             color: #1d4ed8 !important;
-            transform: translateX(2px) !important;
+            transform: translateY(-1px) !important;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15) !important;
+        }}
+
+        [data-testid="stPageLink-NavLink"] p {{
+            font-size: 0.88rem !important;
+            font-weight: 650 !important;
+            margin: 0 !important;
+            line-height: 1 !important;
+        }}
+
+        /* Primary Blue Highlight for Hero Explore Platform & Dashboard Preview Enter Platform */
+        [data-testid="stPageLink-NavLink"][href*="Executive_Overview"] {{
+            background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%) !important;
+            color: #ffffff !important;
+            border: 1px solid #1d4ed8 !important;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3) !important;
+        }}
+
+        [data-testid="stPageLink-NavLink"][href*="Executive_Overview"]:hover {{
+            transform: translateY(-1px) !important;
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4) !important;
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%) !important;
+            color: #ffffff !important;
+        }}
+
+        [data-testid="stPageLink-NavLink"][href*="Executive_Overview"] p {{
+            color: #ffffff !important;
+            font-weight: 650 !important;
+            font-size: 0.92rem !important;
+        }}
+
+        [data-testid="stPageLink-NavLink"][href*="Executive_Overview"] span {{
+            font-size: 1.05rem !important;
+            color: #ffffff !important;
+        }}
+
+        /* Keep Analytics Module Product Cards clean white */
+        .module-product-card ~ div [data-testid="stPageLink-NavLink"],
+        [data-testid="stVerticalBlock"]:has(.module-product-card) [data-testid="stPageLink-NavLink"] {{
+            background: #ffffff !important;
+            color: #1e293b !important;
+            border: 1px solid #cbd5e1 !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+        }}
+
+        .module-product-card ~ div [data-testid="stPageLink-NavLink"]:hover,
+        [data-testid="stVerticalBlock"]:has(.module-product-card) [data-testid="stPageLink-NavLink"]:hover {{
+            border-color: #2563eb !important;
+            background: #eff6ff !important;
+            color: #1d4ed8 !important;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15) !important;
+        }}
+
+        .module-product-card ~ div [data-testid="stPageLink-NavLink"] p,
+        [data-testid="stVerticalBlock"]:has(.module-product-card) [data-testid="stPageLink-NavLink"] p {{
+            color: #1e293b !important;
+            font-weight: 600 !important;
         }}
 
         /* Responsive Breakpoints */

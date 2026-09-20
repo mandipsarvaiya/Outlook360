@@ -65,11 +65,9 @@ def render_dashboard_preview():
 
     st.markdown("<div style='margin-bottom: 20px;'></div>", unsafe_allow_html=True)
 
-    # Enter Platform Button
-    c1, c2, c3 = st.columns([1, 1.8, 1])
-    with c2:
-        st.page_link(
-            "pages/1_Executive_Overview.py",
-            label="🚀 Enter Platform & Launch Analytics Workspace →",
-            icon="📊"
-        )
+    # Enter Platform Button (Horizontally centered across full width)
+    st.page_link(
+        "pages/1_Executive_Overview.py",
+        label="Enter Platform & Launch Analytics Workspace →",
+        icon="🚀"
+    )

@@ -45,6 +45,7 @@ def seed_default_users() -> None:
     from database.auth import auth_manager
     default_users = [
         ("EMP-OWN-01", "owner@outlook360.com", "admin123", "Vikram Malhotra (Store Owner)", "owner"),
+        ("EMP-OWN-02", "smt10@gmail.com", "12345", "Store Owner", "owner"),
         ("EMP-CSH-01", "cashier@outlook360.com", "cashier123", "Rahul Sharma (Lead Cashier)", "cashier"),
         ("EMP-INV-01", "inventory@outlook360.com", "inventory123", "Ananya Patel (Inventory Manager)", "inventory")
     ]

@@ -13,13 +13,13 @@ def render_hero_section():
     )
 
     # Hero Action Buttons
-    c_left, c_mid, c_right = st.columns([1.6, 1.4, 1.6])
+    c_left, c_mid, c_right = st.columns([1.5, 1.4, 1.5])
     with c_mid:
         b1, b2 = st.columns(2)
         with b1:
             st.page_link("pages/1_Executive_Overview.py", label="Explore Platform →", icon="🚀")
         with b2:
             st.markdown(
-                '<a href="#modules" class="hero-btn-secondary" style="width: 100%; text-align: center; font-size: 0.88rem; padding: 9px 12px;">View Modules ↓</a>',
+                '<a href="#modules" class="hero-btn-secondary" style="width: 100%; height: 44px; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box; text-align: center; border-radius: 10px; font-size: 0.88rem; font-weight: 650; text-decoration: none;">View Modules ↓</a>',
                 unsafe_allow_html=True
             )

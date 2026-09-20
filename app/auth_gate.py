@@ -71,7 +71,7 @@ def render_login_screen() -> None:
         with tab1:
             st.caption("Access all Executive BI, Machine Learning, Forecasting, and Staff Control.")
             with st.form("owner_login_form"):
-                owner_email = st.text_input("Gmail / Work Email", placeholder="owner@outlook360.com", key="owner_email")
+                owner_email = st.text_input("Gmail / Work Email", placeholder="smt10@gmail.com", key="owner_email")
                 owner_pwd = st.text_input("Password", type="password", placeholder="••••••••", key="owner_pwd")
                 submit_owner = st.form_submit_button("👑 Sign In as Store Owner", use_container_width=True)
                 
@@ -129,7 +129,7 @@ def render_login_screen() -> None:
             qcol1, qcol2, qcol3 = st.columns(3)
             with qcol1:
                 if st.button("👑 Store Owner", use_container_width=True):
-                    login_user("owner@outlook360.com", "admin123")
+                    login_user("smt10@gmail.com", "12345")
                     st.rerun()
             with qcol2:
                 if st.button("💳 Cashier", use_container_width=True):
