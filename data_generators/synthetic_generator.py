@@ -26,7 +26,7 @@ class SyntheticDataGenerator:
     def __init__(self, domain_key: str = "supermarket", seed: int = 42):
         self.domain_key = domain_key
         self.config = get_domain_config(domain_key)
-        self.fake = Faker()
+        self.fake = Faker("en_IN")
         Faker.seed(seed)
         random.seed(seed)
         np.random.seed(seed)
@@ -85,9 +85,12 @@ class SyntheticDataGenerator:
         prod_dict = {p["name"]: p for p in prod_rows}
         prod_list = prod_rows
 
-        # 4. Customers
+        # 4. Customers (Indian Demographics & Locations)
         customer_rows = []
-        cities = ["New York", "Chicago", "San Francisco", "Austin", "Seattle", "Boston", "Los Angeles", "Denver"]
+        cities = [
+            "Ahmedabad", "Surat", "Vadodara", "Rajkot",
+            "Mumbai", "Pune", "Delhi", "Bengaluru", "Hyderabad"
+        ]
         age_groups = ["18-25", "26-35", "36-50", "51-65", "65+"]
         tiers = ["Standard", "Silver", "Gold", "Platinum"]
         tier_weights = [0.55, 0.25, 0.15, 0.05]
@@ -95,17 +98,20 @@ class SyntheticDataGenerator:
         start_date = datetime.now() - timedelta(days=days_span)
 
         for c_id in range(1, num_customers + 1):
-            reg_offset = random.randint(0, int(days_span * 0.8))
+            reg_offset = random.randint(0, int(days_span * 0.4))
             reg_date = (start_date + timedelta(days=reg_offset)).date()
             name = self.fake.name()
-            email = f"{name.lower().replace(' ', '.')}_{c_id}@{self.fake.free_email_domain()}"
+            # Clean name for email generation
+            clean_name = "".join(ch for ch in name.lower() if ch.isalnum() or ch == ' ').replace(' ', '.')
+            email_domain = random.choice(["gmail.com", "yahoo.in", "outlook.com", "icloud.com", "rediffmail.com"])
+            email = f"{clean_name}_{c_id}@{email_domain}"
             customer_rows.append({
                 "customer_id": c_id,
                 "customer_code": f"CUST-{c_id:04d}",
                 "name": name,
                 "email": email,
                 "phone": self.fake.phone_number(),
-                "gender": random.choice(["Male", "Female", "Non-Binary"]),
+                "gender": random.choice(["Male", "Female"]),
                 "age_group": random.choice(age_groups),
                 "city": random.choice(cities),
                 "tier": random.choices(tiers, weights=tier_weights)[0],
